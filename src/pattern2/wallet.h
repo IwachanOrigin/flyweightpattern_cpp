@@ -7,7 +7,7 @@
 namespace design_pattern
 {
 
-class BillCoin;
+class WalletItem;
 
 class Wallet
 {
@@ -15,11 +15,11 @@ public:
   explicit Wallet() = default;
   ~Wallet();
 
-  void add(BillCoin* pCoin);
+  void add(WalletItem* pItem);
   int getAmount();
 
 private:
-  std::list<BillCoin*> m_coins;
+  std::list<WalletItem*> m_items;
 };
 
 } // design_pattern

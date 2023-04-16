@@ -1,27 +1,27 @@
 
 #include "wallet.h"
-#include "billcoin.h"
+#include "walletitem.h"
 
 using namespace design_pattern;
 
 Wallet::~Wallet()
 {
-  for (auto it = m_coins.begin(); it != m_coins.end(); it++)
+  for (auto it = m_items.begin(); it != m_items.end(); it++)
   {
     delete (*it);
     it++;
   }
 }
 
-void Wallet::add(BillCoin* pCoin)
+void Wallet::add(WalletItem* pItem)
 {
-  m_coins.push_back(pCoin);
+  m_items.push_back(pItem);
 }
 
 int Wallet::getAmount()
 {
   int result = 0;
-  for (auto it = m_coins.begin(); it != m_coins.end(); it++)
+  for (auto it = m_items.begin(); it != m_items.end(); it++)
   {
     result += (*it)->getAmount();
     it++;

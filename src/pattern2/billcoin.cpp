@@ -3,9 +3,8 @@
 
 using namespace design_pattern;
 
-BillCoin::BillCoin(const int& amount, const int& quantity)
+BillCoin::BillCoin(const int& amount)
   : m_amount(amount)
-  , m_quantity(quantity)
 {
 }
 

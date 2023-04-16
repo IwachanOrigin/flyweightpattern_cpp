@@ -5,17 +5,21 @@
 namespace design_pattern
 {
 
+class BillCoinFactory;
+
 class BillCoin
 {
+  friend BillCoinFactory;
+
 public:
-  explicit BillCoin(const int& amount, const int& quantity);
   ~BillCoin() = default;
 
-  int getAmount() const { return (m_amount * m_quantity); }
+  int getAmount() const { return m_amount; }
 
 private:
+  explicit BillCoin(const int& amount);
+
   int m_amount;
-  int m_quantity;
 };
 
 } // design_pattern

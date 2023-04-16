@@ -2,11 +2,15 @@
 project(pattern2 CXX)
 
 set(MAIN_SRC
-  main.cpp
-  billcoin.h
   billcoin.cpp
-  wallet.h
+  billcoin.h
+  billcoinfactory.cpp
+  billcoinfactory.h
+  main.cpp
   wallet.cpp
+  wallet.h
+  walletitem.cpp
+  walletitem.h
 )
 
 add_executable(
