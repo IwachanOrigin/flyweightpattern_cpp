@@ -3,6 +3,10 @@ project(pattern1 CXX)
 
 set(MAIN_SRC
   main.cpp
+  billcoin.h
+  billcoin.cpp
+  wallet.h
+  wallet.cpp
 )
 
 add_executable(
